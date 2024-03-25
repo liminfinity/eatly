@@ -1,0 +1,123 @@
+/* Introduction */
+
+.introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.introduction__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.3rem;
+}
+
+.clarification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: var(--opacity-text-color);
+
+    &::before {
+        content: '';
+        display: block;
+        width: 2rem;
+        height: 1.6px;
+        background: currentColor;
+
+    }
+}
+
+.introduction__description {
+    margin-bottom: 2rem;
+}
+.achievements {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+.achievements__company {
+    display: flex;
+    align-items: inherit;
+    justify-content: center;
+}
+.achievements__title {
+    color: var(--title-color);
+    font-weight: 600;
+}
+.introduction__img {
+    position: relative;
+    flex-shrink: 0;
+}
+.introduction__chicken {
+    position: relative;
+    &::before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 20px;
+        bottom: 18px;
+        background: var(--second-color);
+        border-radius: var(--rounded-full);
+    }  
+}
+.chicken_img,
+.statistic_img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center; 
+}
+
+.introduction__delivery {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+.introduction__statistic {
+    position: absolute;
+    bottom: 0;
+    padding: .5rem;
+    background: var(--main-color);
+    border-radius: var(--rounded-md);
+    box-shadow: var(--shadow-thin);
+}
+
+
+/* Features */
+
+.features {
+    background: var(--second-color) url("/images/features.png") no-repeat center / cover;
+}
+.features__list {
+    padding: 3rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.feature {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-inline: 2rem;
+    &:nth-child(2) {
+        border-inline: .05rem solid var(--feature-text-color);
+    }
+}
+.description_feature {
+    color: var(--feature-text-color);
+}
+
+/* Subscribe */
+
+.subscribe {
+    background: var(--second-color) url("https://live.verstaem.online/eatly/src/img/sale-bg.jpg") no-repeat center / cover;
+}

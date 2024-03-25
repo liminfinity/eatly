@@ -1,0 +1,126 @@
+.container {
+    padding: 5rem 6rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.logo__title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--second-color);
+}
+.link-container {
+    display: flex;
+}
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.nav__link {
+    font-weight: 500;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+    
+}
+.text-link {
+    font-weight: 500;
+}
+.text-link_colored {
+    color: var(--second-color);
+}
+.text-link_bold {
+    font-weight: 700;
+}
+.fill-link {
+    padding: 1rem 1.6rem;
+    background-color: var(--second-color);
+    color: var(--main-color);
+    border-radius: var(--rounded-md);
+    font-weight: 700;
+}
+.stroke-link {
+    padding: 1rem 1.6rem;
+    color: var(--second-color);
+    border: .1rem solid var(--second-color);
+    border-radius: var(--rounded-md);
+    font-weight: 700;
+}
+
+.head-text {
+    color: var(--title-color);
+    font-weight: 700;
+}
+.title1 {
+    font-size: 4.5rem;
+}
+.title2 {
+    font-size: 2.5rem;
+}
+.head-text_white {
+    color: var(--main-color);
+}
+
+.main-word {
+    color: var(--second-color);
+}
+
+.stars {
+    display: flex;
+}
+.star {
+    display: inline-flex;
+}
+.description_opacity {
+    opacity: .7;
+}
+.product-delivery {
+    min-width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: var(--rounded-md);
+    background: var(--main-color);
+    padding: .5rem 1rem;
+    box-shadow: var(--shadow-thin)
+}
+.product-delivery__photo {
+    object-fit: cover;
+    object-position: center;
+    width: 4rem;
+    aspect-ratio: 1 / 1;
+}
+.product-delivery__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    color: var(--title-color);
+}
+.product-delivery__status {
+    font-size: .7rem;
+}
+.product-delivery__time {
+    align-self: flex-end;
+    font-size: .6rem;
+    color: var(--opacity-text-color);
+}

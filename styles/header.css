@@ -1,0 +1,21 @@
+.header-container {
+    position: sticky;
+    padding-block: initial;
+    top: 0px;
+    z-index: 2;
+    background-color: var(--main-color);
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-block: 1.5rem;
+    border-bottom: .1rem solid var(--opacity-text-color);
+    
+}
+.header__nav {
+    flex: 1;
+}
+
+

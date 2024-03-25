@@ -1,0 +1,16 @@
+:root {
+    --main-color: #F9F9F9;
+    --second-color: #6C5FBC;
+    --main-text-color: #606060;
+    --title-color: #201F1F;
+    --opacity-text-color: #CBCBCB;
+    --feature-text-color: #C5BFED;
+    --footer-color: #EAEAEA;
+    --shadow-color: #00000014;
+
+    --rounded-md: 1rem;
+    --rounded-full: 15rem;
+
+    --shadow-thin: 0 1rem 1.5rem var(--shadow-color); 
+
+}
