@@ -119,5 +119,61 @@
 /* Subscribe */
 
 .subscribe {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 2.5rem;
+    border-radius: var(--rounded-md);
+
     background: var(--second-color) url("https://live.verstaem.online/eatly/src/img/sale-bg.jpg") no-repeat center / cover;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 15rem;
+        bottom: -5rem;
+        right: 3rem;
+        aspect-ratio: 1 / 1;
+        background: url("https://live.verstaem.online/eatly/src/img/food.png") no-repeat center / cover;
+    }
+}
+.subscribe__title {
+    
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--main-color);
+}
+.subscribe__form {
+    
+    align-self: flex-start;
+    display: flex;
+    padding: .5rem;
+    font-weight: 600;
+    
+    font-family: 'Poppins', sans-serif;
+    background: var(--main-color);
+    border-radius: var(--rounded-md);
+    &:focus-within {
+        outline: .1rem solid var(--main-color);
+        outline-offset: 2px;
+    }
+}
+.subscribe__input {
+    padding: 1rem;
+    &:focus {
+        outline: none;
+    }
+}
+.subscribe__btn {
+    padding: 1rem 1.6rem;
+    background-color: var(--second-color);
+    color: var(--main-color);
+    border-radius: var(--rounded-md);
+    font-size: .8rem;
+    text-transform: uppercase;
 }
