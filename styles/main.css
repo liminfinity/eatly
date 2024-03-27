@@ -1,5 +1,6 @@
 /* Introduction */
 
+
 .introduction {
     display: flex;
     align-items: center;
@@ -116,8 +117,313 @@
     color: var(--feature-text-color);
 }
 
+/* Mobile-app */
+
+.mobile-app {
+    padding-inline: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+.mobile-app__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+}
+.mobile-app__features {
+    list-style: initial;
+    transform: translate(1.3rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+/* Top restaurants */
+
+.top-restaurants,
+.top-dishes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.restaurant {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--rounded-md);
+    box-shadow: var(--shadow-thin);
+}
+.restaurant_img {
+    max-width: 100%;
+    border-top-left-radius: var(--rounded-md);
+    border-top-right-radius: var(--rounded-md);
+}
+.restaurants-list {
+    grid-template-columns: repeat(auto-fill, minmax(396px, 1fr));  
+}
+.restaurant__info {
+    position: relative;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .4rem;
+}
+.restaurant__bookmark {
+    position: absolute;
+    right: .8rem;
+    bottom: .8rem;
+}
+
+
+/* Top dishes */
+.dishes-list {
+    grid-template-columns: repeat(auto-fill, minmax(229px, 1fr));
+}
+.dish {
+    height: 100%;
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--rounded-md);
+    box-shadow: var(--shadow-thin);
+}
+.dish__info {
+    display: flex;
+    height: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: .4rem;
+}
+.dish__bottom {
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+}
+.dish__statistic {
+    justify-self: flex-start;
+    grid-column: 1 / span 2;
+}
+.dish__price {
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+.dish__btn-add-product {
+    justify-self: flex-end;
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+.dish__favourite {
+    position: absolute;
+    right: .7rem;
+    top: .7rem;
+}
+
+/* Purchases */
+
+.purchases {
+    display: grid;
+    grid-template-areas: 
+    "title dashboard"
+    "orders dashboard"
+    "orders dashboard"
+    "orders dashboard";
+    grid-auto-columns: 1fr;
+    column-gap: 4rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+.title_purchases {
+    grid-area: title;
+    margin-bottom: 2rem;
+}
+
+.orders-list {
+    justify-self: flex-start;
+    grid-area: orders;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+}
+.dashboard {
+    grid-area: dashboard;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1;
+    border-radius: var(--rounded-md);
+    box-shadow: var(--shadow-thin);
+}
+.dashboard__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dashboard__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.purchases__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.purchase {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    border: .08rem solid var(--purchase-border);
+    border-radius: var(--rounded-md);
+    
+}
+.purchase__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+.purchase__info {
+    flex: 1 0 auto;
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    color: var(--purchase-color);
+}
+.purchase__title {
+    
+    font-weight: 500;
+    color: var(--title-color);
+}
+.purchase__description {
+    font-size: .8rem;
+}
+.purchase__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--rounded-full);
+}
+.purchase__logo_expense {
+    background: var(--bookmark-bg);
+}
+.purchase__logo_vocher {
+    background: var(--status-supreme-bg);
+}
+
+.purchase__price {
+    color: var(--title-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.progress {
+    width: 100%;
+    &::-webkit-meter-bar {
+        border: none;
+    }
+    &::-webkit-meter-optimum-value {
+        border-radius: var(--rounded-full);
+    }
+}
+.progress_expense {
+    &::-webkit-meter-bar {
+        background-color: var(--feature-text-color);
+    }
+    &::-webkit-meter-optimum-value {
+        background-color: var(--second-color);
+    }
+}
+.progress_vocher {
+    &::-webkit-meter-bar {
+        background-color:  #daa41a45;
+    }
+    &::-webkit-meter-optimum-value {
+        background-color: var(--status-healthy-color);
+    }
+}
+
+
+/* Reviews */
+
+.reviews-container {
+    border-bottom: none;
+}
+.reviews-list {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.review {
+    min-width: 510px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    border: .1rem solid var(--purchase-border); 
+    border-radius: var(--rounded-md);
+    box-shadow: var(--shadow-thin);
+    font-family: 'Poppins', sans-serif;
+}
+.review__reviewer-main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.review__reviewer-info {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+.review__reviewer-name {
+    font-weight: 500;
+    color: var(--title-color);
+}
+.review__reviewer-description {
+    font-size: .9rem;
+}
+.review__reviewer-quote {
+    font-style: italic;
+    text-align: justify;
+    font-weight: 400;
+}
+
+
 /* Subscribe */
 
+.subscribe-container {
+    border-bottom: none;
+    padding-top: 3rem;
+    padding-bottom: 7rem;
+}
 .subscribe {
     display: flex;
     position: relative;
@@ -174,6 +480,7 @@
     background-color: var(--second-color);
     color: var(--main-color);
     border-radius: var(--rounded-md);
-    font-size: .8rem;
+    font-size: .9rem;
+    font-weight: inherit;
     text-transform: uppercase;
 }

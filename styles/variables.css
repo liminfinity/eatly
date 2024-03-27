@@ -7,6 +7,16 @@
     --feature-text-color: #C5BFED;
     --footer-color: #EAEAEA;
     --shadow-color: #00000014;
+    --status-healthy-bg: #F7EDD0;
+    --status-healthy-color: #DAA31A;
+    --status-trending-bg: #F7C5BA;
+    --status-trending-color: #FB471D;
+    --status-supreme-bg: rgb(179, 233, 200);
+    --status-supreme-color: #309D5B;
+    --bookmark-bg: #DBD9EE;
+    --vocher-bg: #F2FDF6;
+    --purchase-color: #A0AEC0;
+    --purchase-border: #edf2f7;
 
     --rounded-md: 1rem;
     --rounded-full: 15rem;
