@@ -1,0 +1,47 @@
+.scale {
+    transition: .5s;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+.btn_fill-hover {
+    transition: .5s;
+    &:hover {
+        border: .1rem solid transparent;
+        background: var(--second-color);
+        color: var(--main-color);
+        
+    }
+    &:hover * {
+        stroke: var(--second-color);
+    }
+}
+.btn_stroke-hover {
+    transition: .5s;
+    &:hover {
+        border: .1rem solid var(--second-color);
+        background: var(--main-color);
+        color: var(--second-color);
+    }
+    &:hover * {
+        stroke: var(--second-color);
+    }
+}
+.link_hover {
+    transition: .3s;
+    &:hover,
+    &:hover * {
+        stroke: var(--second-color);
+        color: var(--second-color);
+   }
+   .socials-list &:hover * {
+        stroke: none;
+        fill: var(--second-color);
+   }
+}
+.text-link_colored {
+    transition: .3s;
+    &:hover {
+        color: var(--second-color_hover);
+    }
+}

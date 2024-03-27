@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/transition.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="https://live.verstaem.online/eatly/src/img/logo.svg" type="image/x-icon">
     <title>Eatly</title>
@@ -31,15 +32,15 @@
             </a>
             <nav class="nav header__nav">
                 <ul class="nav__list">
-                    <li><a href="#" class="nav__link">Menu</a></li>
-                    <li><a href="#" class="nav__link">Blog</a></li>
-                    <li><a href="#" class="nav__link">Pricing</a></li>
-                    <li><a href="#" class="nav__link">Contacts</a></li>
+                    <li><a href="#" class="link_hover nav__link">Menu</a></li>
+                    <li><a href="#" class="link_hover nav__link">Blog</a></li>
+                    <li><a href="#" class="link_hover nav__link">Pricing</a></li>
+                    <li><a href="#" class="link_hover nav__link">Contacts</a></li>
                 </ul>
             </nav>
             <nav class="link-container header__auth">
-                <a href="#" class="link text-link text-link_bold">Login</a>
-                <a href="#" class="link fill-link">Sign Up</a>
+                <a href="#" class="link link_hover text-link text-link_bold">Login</a>
+                <a href="#" class="btn_stroke-hover link fill-link">Sign Up</a>
             </nav>
         </header>
     </div>
@@ -57,8 +58,8 @@
                             <a href="#" class="link text-link text-link_colored">Get a $20 bonus.</a>
                         </p>
                         <div class="link-container introduction__controls">
-                            <a href="#" class="link fill-link">Get Started</a>
-                            <a href="#" class="link stroke-link">Go Pro</a>
+                            <a href="#" class="btn_stroke-hover link fill-link">Get Started</a>
+                            <a href="#" class="btn_fill-hover link stroke-link">Go Pro</a>
                         </div>
                         <div class="achievements">
                             <div class="achievements__company">
@@ -179,7 +180,7 @@
                                 <p>These foods promote overall wellness by support healthy digestion and boosting immunity</p>
                             </li>
                         </ul>
-                        <a href="#" class="link fill-link">
+                        <a href="#" class="btn_stroke-hover link fill-link">
                             Download
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 9.90234H17.8041" stroke="#F9F9F9" stroke-width="2.25773" stroke-linecap="round" stroke-linejoin="round"/>
@@ -197,7 +198,7 @@
                     <h2 class="head-text title2">Our Top <span class="main-word">Restaurants</span></h2>
                     <ul class="flex-list restaurants-list">
                         <li>
-                            <article class="restaurant">
+                            <article class="scale restaurant">
                                 <img class="restaurant_img" src="https://live.verstaem.online/eatly/src/img/restaurants/1.jpg" alt="The Chiken King image" loading="lazy">
                                 <section class="restaurant__info">
                                     <span class="product-status product-status_healthy">Healthy</span>
@@ -233,7 +234,7 @@
                             </article>
                         </li>
                         <li>
-                            <article class="restaurant">
+                            <article class="scale restaurant">
                                 <img class="restaurant_img" src="https://live.verstaem.online/eatly/src/img/restaurants/2.jpg" alt="The Burger King image" loading="lazy">
                                 <section class="restaurant__info">
                                     <span class="product-status product-status_trending">Trending</span>
@@ -269,7 +270,7 @@
                             </article>
                         </li>
                         <li>
-                            <article class="restaurant">
+                            <article class="scale restaurant">
                                 <img class="restaurant_img" src="https://live.verstaem.online/eatly/src/img/restaurants/1.jpg" alt="The Chiken King image" loading="lazy">
                                 <section class="restaurant__info">
                                     <span class="product-status product-status_healthy">Healthy</span>
@@ -305,9 +306,9 @@
                             </article>
                         </li>
                     </ul>
-                    <a href="#" class="link text-link view-link">
+                    <a href="#" class="link_hover link text-link view-link">
                         View All
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="19" height="19" fill="none" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 9.90234H17.8041" stroke="#ACADB9" stroke-width="2.25773" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M9.90234 2L17.8044 9.90206L9.90234 17.8041" stroke="#ACADB9" stroke-width="2.25773" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -322,7 +323,7 @@
                     <h2 class="head-text title2">Our Top <span class="main-word">Dishes</span></h2>
                     <ul class="flex-list dishes-list">
                         <li>
-                            <article class="dish">
+                            <article class="scale dish">
                                 <button type="button" class="btn btn-favourite dish__favourite" title="add to favourite">
                                     <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0214844 6.66277C0.0214844 3.27527
@@ -388,7 +389,7 @@
                             </article>
                         </li>
                         <li>
-                            <article class="dish">
+                            <article class="scale dish">
                                 <button type="button" class="btn btn-favourite dish__favourite" title="add to favourite">
                                     <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0214844 6.66277C0.0214844 3.27527
@@ -454,7 +455,7 @@
                             </article>
                         </li>
                         <li>
-                            <article class="dish">
+                            <article class="scale dish">
                                 <button type="button" class="btn btn-favourite dish__favourite" title="add to favourite">
                                     <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0214844 6.66277C0.0214844 3.27527
@@ -520,7 +521,7 @@
                             </article>
                         </li>
                         <li>
-                            <article class="dish">
+                            <article class="scale dish">
                                 <button type="button" class="btn btn-favourite dish__favourite" title="add to favourite">
                                     <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0214844 6.66277C0.0214844 3.27527
@@ -586,7 +587,7 @@
                             </article>
                         </li>
                         <li>
-                            <article class="dish">
+                            <article class="scale dish">
                                 <button type="button" class="btn btn-favourite dish__favourite" title="add to favourite">
                                     <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0214844 6.66277C0.0214844 3.27527
@@ -652,7 +653,7 @@
                             </article>
                         </li>
                     </ul>
-                    <a href="#" class="link text-link view-link">
+                    <a href="#" class="link_hover link text-link view-link">
                         View All
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 9.90234H17.8041" stroke="#ACADB9" stroke-width="2.25773" stroke-linecap="round" stroke-linejoin="round"/>
@@ -761,7 +762,7 @@
         <div class="outher-container">
             <div class="inner-container reviews-container">
                 <section class="reviews">
-                    <h2 class="head-text title2"><span class="main-word">Customer</span> Say</h2>
+                    <h2 class="head-text title2"><span class="main-word">Customers</span> Say</h2>
                     <ul class="reviews-list">
                         <li>
                             <article class="review">
@@ -995,7 +996,7 @@
                     <span class="subscribe__title">Get 50%</span>
                     <form class="subscribe__form" action="">
                         <input class="subscribe__input" type="email" name="" id="" placeholder="Enter Your Email Adress" inputmode="email">
-                        <button class="btn subscribe__btn" type="submit">Subscribe</button>
+                        <button class="btn_stroke-hover btn subscribe__btn" type="submit">Subscribe</button>
                     </form>
                 </section>
             </div>
@@ -1018,10 +1019,10 @@
             </a>
             <nav class="nav footer__nav">
                 <ul class="nav__list">
-                    <li><a href="#" class="nav__link">Blog</a></li>
-                    <li><a href="#" class="nav__link">Pricing</a></li>
-                    <li><a href="#" class="nav__link">About Us</a></li>
-                    <li><a href="#" class="nav__link">Contacts</a></li>
+                    <li><a href="#" class="link_hover nav__link">Blog</a></li>
+                    <li><a href="#" class="link_hover nav__link">Pricing</a></li>
+                    <li><a href="#" class="link_hover nav__link">About Us</a></li>
+                    <li><a href="#" class="link_hover nav__link">Contacts</a></li>
                 </ul>
             </nav>
         </section>
@@ -1030,7 +1031,7 @@
             <address>
                 <ul class="socials-list">
                     <li>
-                        <a href="#" title="instagram">
+                        <a href="#" title="instagram" class="link_hover">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7721 0C12.1916 0.0506994 13.6618 0.0506994 
                                 15.0812 0.101392C16.3486 0.152085 17.5146 0.354867 18.6299 1.0139C20.0494 1.87572 20.9112 3.14309 
@@ -1046,7 +1047,7 @@
                                                     
                     </li>
                     <li>
-                        <a href="#" title="linkedIn">
+                        <a href="#" title="linkedIn" class="link_hover">
                             <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6325 12.4811V20.3602H17.0315V12.9987C17.0315 11.1583 16.3989 9.89304 
                                 14.731 9.89304C13.4658 9.89304 12.7181 10.7557 12.373 11.5609C12.258 11.8484 12.2005 12.251 12.2005 12.6536V20.3602H7.59952C7.59952 
@@ -1059,7 +1060,7 @@
                         
                     </li>
                     <li>
-                        <a href="#" title="facebook">
+                        <a href="#" title="facebook" class="link_hover">
                             <svg width="11" height="22" viewBox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.95256 10.6695H6.97166V21.338H2.52644V12.415V10.6695H0.43457V6.90414H2.52644V4.4462C2.52644 
                                 2.72041 3.36319 0.000976562 6.97166 0.000976562H10.2663V3.66174H7.913C7.54692 3.66174 6.97166 3.87094 6.97166 4.70768V6.90414H10.3186L9.95256 
@@ -1069,7 +1070,7 @@
                         
                     </li>
                     <li>
-                        <a href="#" title="twitter">
+                        <a href="#" title="twitter" class="link_hover">
                             <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6154 2.82596C20.8121 3.1774 20.0088 
                                 3.42842 19.1052 3.52883C20.0088 2.97658 20.7117 2.1231 21.0129 1.11901C20.1595 1.62106 
