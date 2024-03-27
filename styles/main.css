@@ -290,6 +290,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
 .dashboard__title {
     font-size: 1.5rem;
@@ -389,6 +390,19 @@
     gap: 2rem;
     overflow-x: auto;
     scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+        height: 15px;
+        border-radius: var(--rounded-full);
+        background: var(--feature-text-color);
+    }
+    &::-webkit-scrollbar-thumb {
+        
+        border-radius: var(--rounded-full);
+        background: var(--second-color);
+    }
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
 }
 .reviews {
     display: flex;

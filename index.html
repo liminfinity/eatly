@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/transition.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="https://live.verstaem.online/eatly/src/img/logo.svg" type="image/x-icon">
+    <script src="scripts/dropDownMenu.js" defer></script>
     <title>Eatly</title>
 </head>
 <body>
@@ -704,11 +705,14 @@
                     <article class="dashboard">
                         <div class="dashboard__header">
                             <h3 class="head-text title3 dashboard__title">Purchases</h3>
-                            <select class="select dashboard__select" aria-label="Select a preference range">
-                                <option value="mounth">This mounth</option>
-                                <option value="week">This week</option>
-                                <option value="year">This year</option>
-                            </select>
+                            <div class="select dashboard__select" aria-label="Select a preference range">
+                                <span class="select__current-value">This mounth</span>
+                                <ul class="select__list">
+                                    <li class="select__option select__option_selected">This mounth</li>
+                                    <li class="select__option">This week</li>
+                                    <li class="select__option">This year</li>
+                                </ul>
+                            </div>
                         </div>
                         <ul class="purchases__list">
                             <li>
