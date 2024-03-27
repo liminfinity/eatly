@@ -77,7 +77,8 @@
     font-weight: 700;
 }
 .title1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
+    line-height: 1.3;
 }
 .title2 {
     font-size: 2.5rem;
@@ -213,9 +214,6 @@
 .btn-bookmark {
     background: var(--bookmark-bg);
 }
-.btn-favourite {
-
-}
 .btn-add-product {
     background: var(--title-color);
 }
@@ -231,4 +229,28 @@
     border-radius: calc(var(--rounded-md) / 1.5);
     background: inherit;
     font-family: 'Poppins', sans-serif;
+}
+.decorate-arrow {
+    position: relative;
+    &::after {
+        content: url("https://live.verstaem.online/eatly/src/img/decor/arrow.svg");
+        position: absolute;
+        bottom: -4.5rem;
+        left: 0;
+        transform: rotate(45deg);
+    }
+}
+.decorate-sticks {
+    position: relative;
+    &::after {
+        content: url("https://live.verstaem.online/eatly/src/img/decor/pattern-2.svg");
+        position: absolute;
+    }
+}
+.decorate-waves {
+    position: relative;
+    &::after {
+        content: url("https://live.verstaem.online/eatly/src/img/decor/pattern-1.svg");
+        position: absolute;
+    }
 }

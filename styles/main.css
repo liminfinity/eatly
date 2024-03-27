@@ -5,10 +5,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
 }
 .introduction__content {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     align-items: start;
     gap: 1.3rem;
@@ -78,8 +79,12 @@
 
 .introduction__delivery {
     position: absolute;
-    right: 0;
+    right: -2rem;
     z-index: 1;
+    &::after {
+        right: 2rem;
+        top: -2rem;
+    }
 }
 .introduction__statistic {
     position: absolute;
@@ -88,6 +93,10 @@
     background: var(--main-color);
     border-radius: var(--rounded-md);
     box-shadow: var(--shadow-thin);
+    &::after {
+        left: -2rem;
+        bottom: -2rem;
+    }
 }
 
 
@@ -140,6 +149,13 @@
     gap: 1.5rem;
     font-weight: 400;
     font-size: 1.1rem;
+}
+.mobile-app__img {
+    &::after {
+        top: -2rem;
+        right: -2rem;
+        transform: rotate(180deg);
+    }
 }
 
 /* Top restaurants */
