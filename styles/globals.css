@@ -12,6 +12,10 @@
 *:focus-visible {
     outline: .1rem solid var(--second-color);
 }
+::selection {
+    background: var(--second-color);
+    color: var(--main-color);
+}
 html {
     font-size: 18px;
 }
@@ -43,10 +47,4 @@ select {
 ul,
 ol {
     list-style: none;
-}
-
-path {
-    stroke: '';
-    fill: '';
-    transition: .3s;
 }

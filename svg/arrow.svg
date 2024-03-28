@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="arrow">
+        <path d="M2 9.90234H17.8041" stroke="currentColor" stroke-width="2.25773" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.90234 2L17.8044 9.90206L9.90234 17.8041" stroke="currentColor" stroke-width="2.25773" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+</svg>

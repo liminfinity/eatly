@@ -295,12 +295,14 @@
 
 .decorate-arrow {
     position: relative;
+    
     &::after {
         content: url("https://live.verstaem.online/eatly/src/img/decor/arrow.svg");
         position: absolute;
         bottom: -4.5rem;
         left: 0;
         transform: rotate(45deg);
+        pointer-events: none;
     }
 }
 .decorate-sticks {
@@ -308,6 +310,7 @@
     &::after {
         content: url("https://live.verstaem.online/eatly/src/img/decor/pattern-2.svg");
         position: absolute;
+        pointer-events: none;
     }
 }
 .decorate-waves {
@@ -315,5 +318,6 @@
     &::after {
         content: url("https://live.verstaem.online/eatly/src/img/decor/pattern-1.svg");
         position: absolute;
+        pointer-events: none;
     }
 }

@@ -1,36 +1,36 @@
 .scale {
-    transition: .5s;
+    transition: transform .5s;
     &:hover {
         transform: scale(1.05);
     }
 }
+.btn_fill-hover,
+.btn_stroke-hover {
+    transition-duration: .5s;
+    transition-property: border, background, color, stroke;
+}
+
 .btn_fill-hover {
-    transition: .5s;
     &:hover {
         border: .1rem solid transparent;
         background: var(--second-color);
         color: var(--main-color);
-        
-    }
-    &:hover * {
         stroke: var(--second-color);
+        
     }
 }
 .btn_stroke-hover {
-    transition: .5s;
     &:hover {
         border: .1rem solid var(--second-color);
         background: var(--main-color);
         color: var(--second-color);
-    }
-    &:hover * {
         stroke: var(--second-color);
     }
 }
 .link_hover {
-    transition: .3s;
-    &:hover,
-    &:hover * {
+    transition-duration: .3s;
+    transition-property: color, stroke, stroke, fill;
+    &:hover {
         stroke: var(--second-color);
         color: var(--second-color);
    }
@@ -40,7 +40,8 @@
    }
 }
 .text-link_colored {
-    transition: .3s;
+    transition-duration: .3s;
+    transition-property: color;
     &:hover {
         color: var(--second-color_hover);
     }
