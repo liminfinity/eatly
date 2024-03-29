@@ -1,5 +1,5 @@
 const path = require('path');
-const buildWebpack = require('./config/webpack/buildWebpack');
+const buildWebpack = require('./webpack/buildWebpack');
 
 
 module.exports = env => {

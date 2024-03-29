@@ -5,6 +5,7 @@ const buildPlugins = require("./buildPlugins")
 
 module.exports = function buildWebpack(options) {
     const {paths, mode} = options
+    
     return {
         mode: mode,
         entry: paths.entry,
