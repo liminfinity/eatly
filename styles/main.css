@@ -189,6 +189,11 @@
         align-self: center;
     }   
 }
+@media (max-width: 470px) {
+    .mobile-app__download::after {
+        bottom: -5.5rem;
+    }
+}
 .mobile-app__content {
     display: flex;
     flex-direction: column;
