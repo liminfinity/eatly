@@ -129,7 +129,7 @@
 /* Features */
 
 .features {
-    background: var(--second-color) url("/images/features.png") no-repeat center / cover;
+    background: var(--second-color) url("../../public/images/features.png") no-repeat center / cover;
 }
 .features__list {
     padding: 3rem 2rem;

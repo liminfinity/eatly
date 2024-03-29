@@ -7,6 +7,7 @@ const headerContent = document.querySelector('.header__content');
 const authNav =  document.querySelector('.header__auth');
 const isPhoneMedia = matchMedia('(max-width: 470px)')
 
+
 isPhoneMedia.addEventListener('change', e => {
     const parent = authNav.parentElement;
     if (e.matches) {

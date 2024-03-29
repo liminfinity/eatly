@@ -2,7 +2,6 @@ const dropdown = document.querySelector('.select');
 const dropdownResult = document.querySelector('.select__current-value');
 const dropdownMenu = document.querySelector('.select__list');
 let ariaExpanded = false;
-
 document.addEventListener('click', e => {
     if (!e.target.closest('.select') && dropdown.classList.contains('visible')) toogleDropDown()
 })
