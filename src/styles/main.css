@@ -129,7 +129,7 @@
 /* Features */
 
 .features {
-    background: var(--second-color) url("/images/features.png") no-repeat center / cover;
+    background: var(--second-color) url("../../public/images/features.png") no-repeat center / cover;
 }
 .features__list {
     padding: 3rem 2rem;
@@ -188,6 +188,11 @@
     .mobile-app__download {
         align-self: center;
     }   
+}
+@media (max-width: 470px) {
+    .mobile-app__download::after {
+        bottom: -5.5rem;
+    }
 }
 .mobile-app__content {
     display: flex;
