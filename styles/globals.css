@@ -12,8 +12,24 @@
 *:focus-visible {
     outline: .1rem solid var(--second-color);
 }
+::selection {
+    background: var(--second-color);
+    color: var(--main-color);
+}
 html {
     font-size: 18px;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+}
+@media (max-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+}
+@media (max-width: 470px) {
+    html {
+        font-size: 14px;
+    }
 }
 body {
     min-height: 100vh;
@@ -43,10 +59,4 @@ select {
 ul,
 ol {
     list-style: none;
-}
-
-path {
-    stroke: '';
-    fill: '';
-    transition: .3s;
 }

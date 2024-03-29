@@ -1,13 +1,31 @@
 .footer {
     background-color: var(--footer-color);
-    padding: 5rem 6rem;
-    
 }
 .footer__head,
 .footer__contact {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+@media (max-width: 900px) {
+    .footer__head,
+    .footer__contact {
+
+        gap: 2rem;
+    }
+    .footer__head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer__contact {
+        flex-direction: column-reverse;
+    }
+}
+@media (max-width: 470px) {
+    .footer__nav .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 .footer__head {
     padding-bottom: 2rem;
