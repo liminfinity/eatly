@@ -14,13 +14,46 @@
     <link rel="stylesheet" href="styles/transition.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="https://live.verstaem.online/eatly/src/img/logo.svg" type="image/x-icon">
-    <script src="scripts/dropDownMenu.js" defer></script>
+    <link rel="apple-touch-icon" href="https://live.verstaem.online/eatly/src/img/logo.svg">
+    <script src="scripts/dropDownMenu.js" async></script>
+    <script src="scripts/sidebar.js" async></script>
 
     <title>Eatly</title>
 </head>
 <body>
-    <div class="outher-container header-container">
-        <header class="header">
+    
+    <section class="sidebar hidden">
+        <main class="sidebar__main" role="complementary">
+            <button type="button" class="btn btn_rounded btn-close sidebar__close" title="close sidebar">
+                <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier"> 
+                        <path d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275
+                         3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 
+                         4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 
+                         21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 
+                         21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 
+                         4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" fill="#606060"></path> 
+                    </g>
+                </svg>                                      
+            </button>
+            <article class="sidebar__content" aria-label="sidebar">
+                <nav class="nav sidebar__nav">
+                    <ul class="nav__list sidebar__list">
+                        <li><a href="#" class="link_hover nav__link sidebar__link">Menu</a></li>
+                        <li><a href="#" class="link_hover nav__link sidebar__link">Blog</a></li>
+                        <li><a href="#" class="link_hover nav__link sidebar__link">Pricing</a></li>
+                        <li><a href="#" class="link_hover nav__link sidebar__link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </article>
+        </main>
+        
+    </section>
+    
+    <header class="container header">
+        <div class="content-container header__content">
             <a href="#" class="logo header__logo">
                 <svg class="logo__svg" width="46" height="43" viewBox="0 0 46 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use href="svg/logo.svg#logo"/>
@@ -39,32 +72,509 @@
                 <a href="#" class="link link_hover text-link text-link_bold">Login</a>
                 <a href="#" class="btn_stroke-hover link fill-link">Sign Up</a>
             </nav>
-        </header>
-    </div>
+            <button type="button" class="btn burger header__burger" title="open navigation list">
+                <span class="burger__line burger__line_top"></span>
+                <span class="burger__line burger__line_middle"></span>
+                <span class="burger__line burger__line_bottom"></span>
+            </button>
+        </div>
+    </header>
     
     <main class="main">
-        <div class="outher-container">
-            <div class="inner-container">
-                <section class="introduction">
-                    <div class="introduction__content">
-                        <p class="clarification">Over 1000 users</p>
-                        <h1 class="head-text title1">Enjoy Foods All Over The <span class="main-word">World</span></h1>
-                        <p class="introduction__description description_opacity">EatLy help you set saving goals, 
-                            earn cash back offers, Go to disclaimer for more details and get paychecks up to two days early. 
-                            <a href="#" class="link text-link text-link_colored">Get a $20 bonus.</a>
-                        </p>
-                        <div class="link-container introduction__controls">
-                            <a href="#" class="btn_stroke-hover link fill-link">Get Started</a>
-                            <a href="#" class="btn_fill-hover link stroke-link">Go Pro</a>
+        <div class="container">
+            <section class="content-container introduction">
+                <div class="introduction__content">
+                    <p class="clarification">Over 1000 users</p>
+                    <h1 class="head-text title1">Enjoy Foods All Over The <span class="main-word">World</span></h1>
+                    <p class="introduction__description description_opacity">EatLy help you set saving goals, 
+                        earn cash back offers, Go to disclaimer for more details and get paychecks up to two days early. 
+                        <a href="#" class="link text-link text-link_colored">Get a $20 bonus.</a>
+                    </p>
+                    <div class="link-container introduction__controls">
+                        <a href="#" class="btn_stroke-hover link fill-link">Get Started</a>
+                        <a href="#" class="btn_fill-hover link stroke-link">Go Pro</a>
+                    </div>
+                    <div class="achievements">
+                        <div class="achievements__company">
+                            <svg class="achievements__svg" width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <use href="svg/trustpilot.svg#trustpilot"/>
+                            </svg>                            
+                            <span class="achievements__title">Trustpilot</span>
                         </div>
-                        <div class="achievements">
-                            <div class="achievements__company">
-                                <svg class="achievements__svg" width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <use href="svg/trustpilot.svg#trustpilot"/>
-                                </svg>                            
-                                <span class="achievements__title">Trustpilot</span>
+                        <ul class="stars achievements__rating">
+                            <li class="star">
+                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="svg/star.svg#star"/>
+                                </svg>
+                            </li>
+                            <li class="star">
+                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="svg/star.svg#star"/>
+                                </svg>
+                            </li>
+                            <li class="star">
+                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="svg/star.svg#star"/>
+                                </svg>
+                            </li>
+                            <li class="star">
+                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="svg/star.svg#star"/>
+                                </svg>
+                            </li>
+                            <li class="star">
+                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="svg/star.svg#star"/>
+                                </svg>
+                            </li>
+                        </ul>
+                        <span class="achievements__quantity">4900+</span>
+                    </div>
+                </div>
+                <section class="introduction__img">
+                    <article class="product-delivery introduction__delivery decorate-waves">
+                        <img class="product-delivery__photo" src="https://live.verstaem.online/eatly/src/img/food/1.png" alt="Chiken hell" loading="lazy">
+                        <div class="product-delivery__info">
+                            <b>Chiken Hell</b>
+                            <span class="product-delivery__status product-delivery__status_way">On The Way</span>
+                        </div>
+                        <span class="product-delivery__time">3:09 PM</span>
+                    </article>
+                    <div class="introduction__chicken">
+                        <img class="chicken_img" src="https://live.verstaem.online/eatly/src/img/food.png" alt="" loading="lazy">
+                    </div>
+                    <div class="introduction__statistic decorate-sticks">
+                        <img class="statistic_img" src="https://live.verstaem.online/eatly/src/img/graph.png" alt="" loading="lazy">
+                    </div>
+                </section>
+            </section>
+        </div>
+        
+        <section class="container features">
+            <ul class="content-container features__list">
+                <li class="feature">
+                    <h2 class="head-text head-text_white title2">10K+</h2>
+                    <p class="description_feature">Satisfied Costumers All Great Over The World</p>
+                </li>
+                <li class="feature">
+                    <h2 class="head-text head-text_white title2">4M</h2>
+                    <p class="description_feature">Healthy Dishes Sold Including Milk Shakes Smooth</p>
+                </li>
+                <li class="feature">
+                    <h2 class="head-text head-text_white title2">99.99%</h2>
+                    <p class="description_feature">Reliable Customer Support We Provide Great Experiences</p>
+                </li>
+            </ul>
+        </section>
+        <div class="container">
+            <section class="content-container mobile-app">
+                <div class="mobile-app__img decorate-sticks">
+                    <img src="https://live.verstaem.online/eatly/src/img/phone.png" alt="mobile screen" loading="lazy">
+                </div>
+                <div class="mobile-app__content">
+                    <h2 class="head-text title2">Premium <span class="main-word">Quality</span> For Your Health</h2>
+                    <ul class="mobile-app__features">
+                        <li class="mobile-app__feature">
+                            <p>Premium quality food is made with ingredients that are packed with essential vitamins, minerals.</p>
+                        </li>
+                        <li class="mobile-app__feature">
+                            <p>These foods promote overall wellness by support healthy digestion and boosting immunity</p>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn_stroke-hover link fill-link decorate-arrow mobile-app__download">
+                        Download
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use href="svg/arrow.svg#arrow"/>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+            
+        </div>
+        <div class="container">
+            <section class="content-container top-restaurants">
+                <h2 class="head-text title2">Our Top <span class="main-word">Restaurants</span></h2>
+                <ul class="flex-list restaurants-list">
+                    <li>
+                        <article class="scale restaurant">
+                            <img class="restaurant_img" src="https://live.verstaem.online/eatly/src/img/restaurants/1.jpg" alt="The Chiken King image" loading="lazy">
+                            <section class="restaurant__info">
+                                <span class="product-status product-status_healthy">Healthy</span>
+                                <h3 class="head-text title3">The Chiken King</h3>
+                                <div class="restaurant__bottom">
+                                    <article class="statistic">
+                                        <span class="waiting-time">24min</span>
+                                        <article class="rating">
+                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <use href="svg/star-purple.svg#star-purple"/>
+                                            </svg>
+                                            <span>4.8</span>
+                                        </article>
+                                    </article>
+                                    <button type="button" class="restaurant__bookmark btn btn_rounded btn-bookmark" title="add to bookmarks">
+                                        <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="svg/bookmark.svg#bookmark"/>
+                                        </svg>                                
+                                    </button>
+                                </div>
+                            </section>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="scale restaurant">
+                            <img class="restaurant_img" src="https://live.verstaem.online/eatly/src/img/restaurants/2.jpg" alt="The Burger King image" loading="lazy">
+                            <section class="restaurant__info">
+                                <span class="product-status product-status_trending">Trending</span>
+                                <h3 class="head-text title3">The Burger King</h3>
+                                <div class="restaurant__bottom">
+                                    <article class="statistic">
+                                        <span class="waiting-time">24min</span>
+                                        <article class="rating">
+                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <use href="svg/star-purple.svg#star-purple"/>
+                                            </svg>
+                                            <span>4.8</span>
+                                        </article>
+                                    </article>
+                                    <button type="button" class="restaurant__bookmark btn btn_rounded btn-bookmark" title="add to bookmarks">
+                                        <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="svg/bookmark.svg#bookmark"/>
+                                        </svg>                                
+                                    </button>
+                                </div>
+                            </section>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="scale restaurant">
+                            <img class="restaurant_img" src="https://live.verstaem.online/eatly/src/img/restaurants/1.jpg" alt="The Chiken King image" loading="lazy">
+                            <section class="restaurant__info">
+                                <span class="product-status product-status_healthy">Healthy</span>
+                                <h3 class="head-text title3">The Chiken King</h3>
+                                <div class="restaurant__bottom">
+                                    <article class="statistic">
+                                        <span class="waiting-time">24min</span>
+                                        <article class="rating">
+                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <use href="svg/star-purple.svg#star-purple"/>
+                                            </svg>
+                                            <span>4.8</span>
+                                        </article>
+                                    </article>
+                                    <button type="button" class="restaurant__bookmark btn btn_rounded btn-bookmark" title="add to bookmarks">
+                                        <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="svg/bookmark.svg#bookmark"/>
+                                        </svg>                                
+                                    </button>
+                                </div>
+                            </section>
+                        </article>
+                    </li>
+                </ul>
+                <a href="#" class="link_hover link text-link view-link">
+                    View All
+                    <svg width="19" height="19" fill="none" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                        <use href="svg/arrow.svg#arrow"/>
+                    </svg>
+                </a>
+            </section>
+        </div>
+        <div class="container">
+            <section class="content-container top-dishes">
+                <h2 class="head-text title2">Our Top <span class="main-word">Dishes</span></h2>
+                <ul class="flex-list dishes-list">
+                    <li>
+                        <article class="scale dish">
+                            <button type="button" class="btn btn-favourite dish__favourite" title="add to favourite">
+                                <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="svg/favourite.svg#favourite"/>
+                                </svg>                                
+                            </button>
+                            <img class="dish__photo" src="https://live.verstaem.online/eatly/src/img/food/1.png" alt="Chiken hell" loading="lazy">
+                            <section class="dish__info">
+                                <span class="product-status product-status_trending">Trending</span>
+                                <h3 class="head-text title3">The Chiken King</h3>
+                                
+                                <div class="dish__bottom">
+                                    <article class="statistic dish__statistic">
+                                        <span class="waiting-time">24min</span>
+                                        <article class="rating">
+                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <use href="svg/star-purple.svg#star-purple"/>
+                                            </svg>
+                                            <span>4.8</span>
+                                        </article>
+                                    </article>
+                                    <span class="dish__price"><span class="title3 main-word_bold">$12</span>.99</span>
+                                    <button type="button" class="btn btn_rounded btn-add-product dish__btn-add-product" title="add product">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="svg/cross.svg#cross"/>
+                                        </svg>                                        
+                                    </button>
+                                </div>
+                            </section>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="scale dish">
+                            <button type="button" class="btn btn-favourite dish__favourite" title="add to favourite">
+                                <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="svg/favourite.svg#favourite"/>
+                                </svg>                                 
+                            </button>
+                            <img class="dish__photo" src="https://live.verstaem.online/eatly/src/img/food/2.png" alt="Swe Dish" loading="lazy">
+                            <section class="dish__info">
+                                <span class="product-status product-status_healthy">Healthy</span>
+                                <h3 class="head-text title3">Swe Dish</h3>
+                                
+                                <div class="dish__bottom">
+                                    <article class="statistic dish__statistic">
+                                        <span class="waiting-time">24min</span>
+                                        <article class="rating">
+                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <use href="svg/star-purple.svg#star-purple"/>
+                                            </svg>
+                                            <span>4.8</span>
+                                        </article>
+                                    </article>
+                                    <span class="dish__price"><span class="title3 main-word_bold">$12</span>.99</span>
+                                    <button type="button" class="btn btn_rounded btn-add-product dish__btn-add-product" title="add product">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="svg/cross.svg#cross"/>
+                                        </svg>                                        
+                                    </button>
+                                </div>
+                            </section>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="scale dish">
+                            <button type="button" class="btn btn-favourite dish__favourite" title="add to favourite">
+                                <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="svg/favourite.svg#favourite"/>
+                                </svg>                                
+                            </button>
+                            <img class="dish__photo" src="https://live.verstaem.online/eatly/src/img/food/1.png" alt="Chiken hell" loading="lazy">
+                            <section class="dish__info">
+                                <span class="product-status product-status_trending">Trending</span>
+                                <h3 class="head-text title3">The Chiken King</h3>
+                                
+                                <div class="dish__bottom">
+                                    <article class="statistic dish__statistic">
+                                        <span class="waiting-time">24min</span>
+                                        <article class="rating">
+                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <use href="svg/star-purple.svg#star-purple"/>
+                                            </svg>
+                                            <span>4.8</span>
+                                        </article>
+                                    </article>
+                                    <span class="dish__price"><span class="title3 main-word_bold">$12</span>.99</span>
+                                    <button type="button" class="btn btn_rounded btn-add-product dish__btn-add-product" title="add product">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="svg/cross.svg#cross"/>
+                                        </svg>                                        
+                                    </button>
+                                </div>
+                            </section>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="scale dish">
+                            <button type="button" class="btn btn-favourite dish__favourite" title="add to favourite">
+                                <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="svg/favourite.svg#favourite"/>
+                                </svg>                                 
+                            </button>
+                            <img class="dish__photo" src="https://live.verstaem.online/eatly/src/img/food/1.png" alt="Chiken hell" loading="lazy">
+                            <section class="dish__info">
+                                <span class="product-status product-status_supreme">Supreme</span>
+                                <h3 class="head-text title3">The Chiken King</h3>
+                                
+                                <div class="dish__bottom">
+                                    <article class="statistic dish__statistic">
+                                        <span class="waiting-time">24min</span>
+                                        <article class="rating">
+                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <use href="svg/star-purple.svg#star-purple"/>
+                                            </svg>
+                                            <span>4.8</span>
+                                        </article>
+                                    </article>
+                                    <span class="dish__price"><span class="title3 main-word_bold">$12</span>.99</span>
+                                    <button type="button" class="btn btn_rounded btn-add-product dish__btn-add-product" title="add product">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="svg/cross.svg#cross"/>
+                                        </svg>                                        
+                                    </button>
+                                </div>
+                            </section>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="scale dish">
+                            <button type="button" class="btn btn-favourite dish__favourite" title="add to favourite">
+                                <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="svg/favourite.svg#favourite"/>
+                                </svg>                                 
+                            </button>
+                            <img class="dish__photo" src="https://live.verstaem.online/eatly/src/img/food/2.png" alt="Swe Dish" loading="lazy">
+                            <section class="dish__info">
+                                <span class="product-status product-status_trending">Trending</span>
+                                <h3 class="head-text title3">Swe Dish</h3>
+                                
+                                <div class="dish__bottom">
+                                    <article class="statistic dish__statistic">
+                                        <span class="waiting-time">24min</span>
+                                        <article class="rating">
+                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <use href="svg/star-purple.svg#star-purple"/>
+                                            </svg>
+                                            <span>4.8</span>
+                                        </article>
+                                    </article>
+                                    <span class="dish__price"><span class="title3 main-word_bold">$12</span>.99</span>
+                                    <button type="button" class="btn btn_rounded btn-add-product dish__btn-add-product" title="add product">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use href="svg/cross.svg#cross"/>
+                                        </svg>                                       
+                                    </button>
+                                </div>
+                            </section>
+                        </article>
+                    </li>
+                </ul>
+                <a href="#" class="link_hover link text-link view-link">
+                    View All
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use href="svg/arrow.svg#arrow"/>
+                    </svg>
+                </a>
+            </section>
+        </div>
+        <div class="container">
+            <section class="content-container purchases">
+                <h2 class="head-text title2 title_purchases">Control <span class="main-word">Purchases</span> Via Dashboard</h2>
+                <ul class="orders-list">
+                    <li>
+                        <article class="product-delivery">
+                            <img class="product-delivery__photo" src="https://live.verstaem.online/eatly/src/img/food/1.png" alt="Chiken hell" loading="lazy">
+                            <div class="product-delivery__info">
+                                <b>Chiken Hell</b>
+                                <span class="product-delivery__status product-delivery__status_way">On The Way</span>
                             </div>
-                            <ul class="stars achievements__rating">
+                            <span class="product-delivery__time">3:09 PM</span>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="product-delivery">
+                            <img class="product-delivery__photo" src="https://live.verstaem.online/eatly/src/img/food/2.png" alt="Swe Dish" loading="lazy">
+                            <div class="product-delivery__info">
+                                <b>Swe Dish</b>
+                                <span class="product-delivery__status product-delivery__status_canceled">Canceled</span>
+                            </div>
+                            <span class="product-delivery__time">Yesterday</span>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="product-delivery">
+                            <img class="product-delivery__photo" src="https://live.verstaem.online/eatly/src/img/food/3.png" alt="Fish Hel Veg" loading="lazy">
+                            <div class="product-delivery__info">
+                                <b>Fish Hel Veg</b>
+                                <span class="product-delivery__status product-delivery__status_delivered">Delivered</span>
+                            </div>
+                            <span class="product-delivery__time">Yesterday</span>
+                        </article>
+                    </li>
+                </ul>
+                <article class="dashboard">
+                    <div class="dashboard__header">
+                        <h3 class="head-text title3 dashboard__title">Purchases</h3>
+                        <div 
+                            class="select dashboard__select"
+                            role="listbox" 
+                            aria-label="Select a preference range" 
+                            aria-owns="dropdown-options"
+                            aria-activedescendant="selected-option"
+                            aria-haspopup="listbox"
+                            tabindex="0"
+                            aria-expanded="false"
+                        >
+                            <span class="select__current-value" id="selected-option">This mounth</span>
+                            <ul role="presentation" class="select__list hidden" id="dropdown-options">
+                                <li role="option" aria-selected="true" class="select__option select__option_selected">This mounth</li>
+                                <li role="option" aria-selected="false" class="select__option">This week</li>
+                                <li role="option" aria-selected="false" class="select__option">This year</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="purchases__list">
+                        <li>
+                            <article class="purchase">
+                                <section class="purchase__main">
+                                    <div class="purchase__logo purchase__logo_expense">
+                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.3524 1.77494L12.321 1.84823L9.28451 8.89494H6.30039C5.58839 8.89494 4.9078 9.04153 4.29004 9.30329L6.12239 4.92659L6.16427 4.82188L6.23757 4.65435C6.25851 4.59153 6.27945 4.52871 6.31086 4.47635C7.68251 1.30376 9.23216 0.581293 12.3524 1.77494Z" stroke="#936DFF" stroke-width="1.57059" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M17.9957 9.10431C17.5245 8.95773 17.0219 8.8949 16.5194 8.8949H9.28418L12.3206 1.8482L12.3521 1.7749C12.5091 1.82726 12.6557 1.90055 12.8128 1.96337L15.1268 2.93714C16.4147 3.47114 17.3151 4.02608 17.8596 4.6962C17.9643 4.82184 18.0481 4.93702 18.1214 5.07314C18.2156 5.21973 18.2889 5.36631 18.3308 5.52337C18.3727 5.61761 18.4041 5.71184 18.425 5.79561C18.7077 6.67514 18.5402 7.75361 17.9957 9.10431Z" stroke="#936DFF" stroke-width="1.57059" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M21.6303 14.0052V16.0469C21.6303 16.2563 21.6198 16.4657 21.6093 16.6752C21.4104 20.3294 19.3686 22.1722 15.4945 22.1722H7.32744C7.07615 22.1722 6.82485 22.1513 6.58403 22.1199C3.25438 21.9 1.47438 20.12 1.2545 16.7903C1.22309 16.5495 1.20215 16.2982 1.20215 16.0469V14.0052C1.20215 11.9006 2.47956 10.0892 4.30144 9.30386C4.92968 9.0421 5.5998 8.89551 6.3118 8.89551H16.5311C17.0441 8.89551 17.5467 8.9688 18.0074 9.10492C20.0911 9.74363 21.6303 11.6912 21.6303 14.0052Z" stroke="#936DFF" stroke-width="1.57059" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6.12208 4.92676L4.28972 9.30346C2.46784 10.0888 1.19043 11.9002 1.19043 14.0048V10.9369C1.19043 7.96323 3.30549 5.4817 6.12208 4.92676Z" stroke="#936DFF" stroke-width="1.57059" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M21.6277 10.9358V14.0036C21.6277 11.7001 20.099 9.74211 18.0049 9.11387C18.5494 7.7527 18.7064 6.6847 18.4446 5.7947C18.4237 5.70046 18.3923 5.60623 18.3504 5.52246C20.2979 6.52764 21.6277 8.59034 21.6277 10.9358Z" stroke="#936DFF" stroke-width="1.57059" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                    
+                                    </div>
+                                    <div class="purchase__info">
+                                        <span class="purchase__title">Expense</span>
+                                        <span class="purchase__description">Increased By 10%</span>
+                                    </div>
+                                    <span class="purchase__price">$409.00</span>
+                                </section>
+                                <meter class="progress progress_expense" min="1" max="10" value="8"></meter>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="purchase">
+                                <section class="purchase__main">
+                                    <div class="purchase__logo purchase__logo_vocher">
+                                        <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16.8963 19.2331H6.42572C3.28455 19.2331 1.19043 17.6625 1.19043 13.9978V6.6684C1.19043 3.00369 3.28455 1.43311 6.42572 1.43311H16.8963C20.0375 1.43311 22.1316 3.00369 22.1316 6.6684V13.9978C22.1316 17.6625 20.0375 19.2331 16.8963 19.2331Z" stroke="#22C55E" stroke-width="1.57059" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M11.6617 13.4738C13.3965 13.4738 14.8029 12.0674 14.8029 10.3326C14.8029 8.59776 13.3965 7.19141 11.6617 7.19141C9.92686 7.19141 8.52051 8.59776 8.52051 10.3326C8.52051 12.0674 9.92686 13.4738 11.6617 13.4738Z" stroke="#22C55E" stroke-width="1.57059" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4.85645 7.71533V12.9506" stroke="#22C55E" stroke-width="1.57059" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M18.4668 7.71533V12.9506" stroke="#22C55E" stroke-width="1.57059" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                    
+                                    </div>
+                                    <div class="purchase__info">
+                                        <span class="purchase__title">Vocher Usage</span>
+                                        <span class="purchase__description">Increased By 10%</span>
+                                    </div>
+                                    <span class="purchase__price">$45.00</span>
+                                </section>
+                                <meter class="progress progress_vocher" min="1" max="10" value="6"></meter>
+                            </article>
+                        </li>
+    
+                    </ul>
+                </article>
+            </section>
+        </div>
+        
+        <div class="container">
+            <section class="content-container reviews">
+                <h2 class="head-text title2"><span class="main-word">Customers</span> Say</h2>
+                <ul class="reviews-list">
+                    <li>
+                        <article class="review">
+                            <section class="review__reviewer-main">
+                                <img src="https://live.verstaem.online/eatly/src/img/review/1.png" alt="review writer image" loading="lazy">
+                                <div class="review__reviewer-info">
+                                    <span class="review__reviewer-name">Alexander R.</span>
+                                    <span class="review__reviewer-description">1 Year With Us</span>
+                                </div>
+                            </section>
+                            <blockquote class="review__reviewer-quote">
+                                <p>" Online invoice payment helps companies save time, 
+                                    are faster and save maximum effort for the clients and save maximum effort. 
+                                    Online invoice payment helps companies save time "</p>
+                            </blockquote>
+                            <ul class="stars">
                                 <li class="star">
                                     <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <use href="svg/star.svg#star"/>
@@ -91,590 +601,101 @@
                                     </svg>
                                 </li>
                             </ul>
-                            <span class="achievements__quantity">4900+</span>
-                        </div>
-                    </div>
-                    <section class="introduction__img">
-                        <article class="product-delivery introduction__delivery decorate-waves">
-                            <img class="product-delivery__photo" src="https://live.verstaem.online/eatly/src/img/food/1.png" alt="Chiken hell" loading="lazy">
-                            <div class="product-delivery__info">
-                                <b>Chiken Hell</b>
-                                <span class="product-delivery__status product-delivery__status_way">On The Way</span>
-                            </div>
-                            <span class="product-delivery__time">3:09 PM</span>
+                            
                         </article>
-                        <div class="introduction__chicken">
-                            <img class="chicken_img" src="https://live.verstaem.online/eatly/src/img/food.png" alt="" loading="lazy">
-                        </div>
-                        <div class="introduction__statistic decorate-sticks">
-                            <img class="statistic_img" src="https://live.verstaem.online/eatly/src/img/graph.png" alt="" loading="lazy">
-                        </div>
-                    </section>
-                </section>
-            </div>
-            
-        </div>
-        
-        <section class="features">
-            <ul class="features__list">
-                <li class="feature">
-                    <h2 class="head-text head-text_white title2">10K+</h2>
-                    <p class="description_feature">Satisfied Costumers All Great Over The World</p>
-                </li>
-                <li class="feature">
-                    <h2 class="head-text head-text_white title2">4M</h2>
-                    <p class="description_feature">Healthy Dishes Sold Including Milk Shakes Smooth</p>
-                </li>
-                <li class="feature">
-                    <h2 class="head-text head-text_white title2">99.99%</h2>
-                    <p class="description_feature">Reliable Customer Support We Provide Great Experiences</p>
-                </li>
-            </ul>
-        </section>
-        <div class="outher-container">
-            <div class="inner-container">
-                <section class="mobile-app">
-                    <div class="mobile-app__img decorate-sticks">
-                        <img src="https://live.verstaem.online/eatly/src/img/phone.png" alt="mobile screen" loading="lazy">
-                    </div>
-                    <div class="mobile-app__content">
-                        <h2 class="head-text title2">Premium <span class="main-word">Quality</span> For Your Health</h2>
-                        <ul class="mobile-app__features">
-                            <li class="mobile-app__feature">
-                                <p>Premium quality food is made with ingredients that are packed with essential vitamins, minerals.</p>
-                            </li>
-                            <li class="mobile-app__feature">
-                                <p>These foods promote overall wellness by support healthy digestion and boosting immunity</p>
-                            </li>
-                        </ul>
-                        <a href="#" class="btn_stroke-hover link fill-link decorate-arrow">
-                            Download
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <use href="svg/arrow.svg#arrow"/>
-                            </svg>
-                        </a>
-                    </div>
-                </section>
-            </div>
-            
-        </div>
-        <div class="outher-container">
-            <div class="inner-container">
-                <section class="top-restaurants">
-                    <h2 class="head-text title2">Our Top <span class="main-word">Restaurants</span></h2>
-                    <ul class="flex-list restaurants-list">
-                        <li>
-                            <article class="scale restaurant">
-                                <img class="restaurant_img" src="https://live.verstaem.online/eatly/src/img/restaurants/1.jpg" alt="The Chiken King image" loading="lazy">
-                                <section class="restaurant__info">
-                                    <span class="product-status product-status_healthy">Healthy</span>
-                                    <h3 class="head-text title3">The Chiken King</h3>
-                                    <div class="restaurant__bottom">
-                                        <article class="statistic">
-                                            <span class="waiting-time">24min</span>
-                                            <article class="rating">
-                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <use href="svg/star-purple.svg#star-purple"/>
-                                                </svg>
-                                                <span>4.8</span>
-                                            </article>
-                                        </article>
-                                        <button type="button" class="restaurant__bookmark btn btn_rounded btn-bookmark" title="add to bookmarks">
-                                            <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <use href="svg/bookmark.svg#bookmark"/>
-                                            </svg>                                
-                                        </button>
-                                    </div>
-                                </section>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="scale restaurant">
-                                <img class="restaurant_img" src="https://live.verstaem.online/eatly/src/img/restaurants/2.jpg" alt="The Burger King image" loading="lazy">
-                                <section class="restaurant__info">
-                                    <span class="product-status product-status_trending">Trending</span>
-                                    <h3 class="head-text title3">The Burger King</h3>
-                                    <div class="restaurant__bottom">
-                                        <article class="statistic">
-                                            <span class="waiting-time">24min</span>
-                                            <article class="rating">
-                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <use href="svg/star-purple.svg#star-purple"/>
-                                                </svg>
-                                                <span>4.8</span>
-                                            </article>
-                                        </article>
-                                        <button type="button" class="restaurant__bookmark btn btn_rounded btn-bookmark" title="add to bookmarks">
-                                            <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <use href="svg/bookmark.svg#bookmark"/>
-                                            </svg>                                
-                                        </button>
-                                    </div>
-                                </section>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="scale restaurant">
-                                <img class="restaurant_img" src="https://live.verstaem.online/eatly/src/img/restaurants/1.jpg" alt="The Chiken King image" loading="lazy">
-                                <section class="restaurant__info">
-                                    <span class="product-status product-status_healthy">Healthy</span>
-                                    <h3 class="head-text title3">The Chiken King</h3>
-                                    <div class="restaurant__bottom">
-                                        <article class="statistic">
-                                            <span class="waiting-time">24min</span>
-                                            <article class="rating">
-                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <use href="svg/star-purple.svg#star-purple"/>
-                                                </svg>
-                                                <span>4.8</span>
-                                            </article>
-                                        </article>
-                                        <button type="button" class="restaurant__bookmark btn btn_rounded btn-bookmark" title="add to bookmarks">
-                                            <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <use href="svg/bookmark.svg#bookmark"/>
-                                            </svg>                                
-                                        </button>
-                                    </div>
-                                </section>
-                            </article>
-                        </li>
-                    </ul>
-                    <a href="#" class="link_hover link text-link view-link">
-                        View All
-                        <svg width="19" height="19" fill="none" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
-                            <use href="svg/arrow.svg#arrow"/>
-                        </svg>
-                    </a>
-                </section>
-            </div>
-            
-        </div>
-        <div class="outher-container">
-            <div class="inner-container">
-                <section class="top-dishes">
-                    <h2 class="head-text title2">Our Top <span class="main-word">Dishes</span></h2>
-                    <ul class="flex-list dishes-list">
-                        <li>
-                            <article class="scale dish">
-                                <button type="button" class="btn btn-favourite dish__favourite" title="add to favourite">
-                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <use href="svg/favourite.svg#favourite"/>
-                                    </svg>                                
-                                </button>
-                                <img class="dish__photo" src="https://live.verstaem.online/eatly/src/img/food/1.png" alt="Chiken hell" loading="lazy">
-                                <section class="dish__info">
-                                    <span class="product-status product-status_trending">Trending</span>
-                                    <h3 class="head-text title3">The Chiken King</h3>
-                                    
-                                    <div class="dish__bottom">
-                                        <article class="statistic dish__statistic">
-                                            <span class="waiting-time">24min</span>
-                                            <article class="rating">
-                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <use href="svg/star-purple.svg#star-purple"/>
-                                                </svg>
-                                                <span>4.8</span>
-                                            </article>
-                                        </article>
-                                        <span class="dish__price"><span class="title3 main-word_bold">$12</span>.99</span>
-                                        <button type="button" class="btn btn_rounded btn-add-product dish__btn-add-product" title="add product">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <use href="svg/cross.svg#cross"/>
-                                            </svg>                                        
-                                        </button>
-                                    </div>
-                                </section>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="scale dish">
-                                <button type="button" class="btn btn-favourite dish__favourite" title="add to favourite">
-                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <use href="svg/favourite.svg#favourite"/>
-                                    </svg>                                 
-                                </button>
-                                <img class="dish__photo" src="https://live.verstaem.online/eatly/src/img/food/2.png" alt="Swe Dish" loading="lazy">
-                                <section class="dish__info">
-                                    <span class="product-status product-status_healthy">Healthy</span>
-                                    <h3 class="head-text title3">Swe Dish</h3>
-                                    
-                                    <div class="dish__bottom">
-                                        <article class="statistic dish__statistic">
-                                            <span class="waiting-time">24min</span>
-                                            <article class="rating">
-                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <use href="svg/star-purple.svg#star-purple"/>
-                                                </svg>
-                                                <span>4.8</span>
-                                            </article>
-                                        </article>
-                                        <span class="dish__price"><span class="title3 main-word_bold">$12</span>.99</span>
-                                        <button type="button" class="btn btn_rounded btn-add-product dish__btn-add-product" title="add product">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <use href="svg/cross.svg#cross"/>
-                                            </svg>                                        
-                                        </button>
-                                    </div>
-                                </section>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="scale dish">
-                                <button type="button" class="btn btn-favourite dish__favourite" title="add to favourite">
-                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <use href="svg/favourite.svg#favourite"/>
-                                    </svg>                                
-                                </button>
-                                <img class="dish__photo" src="https://live.verstaem.online/eatly/src/img/food/1.png" alt="Chiken hell" loading="lazy">
-                                <section class="dish__info">
-                                    <span class="product-status product-status_trending">Trending</span>
-                                    <h3 class="head-text title3">The Chiken King</h3>
-                                    
-                                    <div class="dish__bottom">
-                                        <article class="statistic dish__statistic">
-                                            <span class="waiting-time">24min</span>
-                                            <article class="rating">
-                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <use href="svg/star-purple.svg#star-purple"/>
-                                                </svg>
-                                                <span>4.8</span>
-                                            </article>
-                                        </article>
-                                        <span class="dish__price"><span class="title3 main-word_bold">$12</span>.99</span>
-                                        <button type="button" class="btn btn_rounded btn-add-product dish__btn-add-product" title="add product">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <use href="svg/cross.svg#cross"/>
-                                            </svg>                                        
-                                        </button>
-                                    </div>
-                                </section>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="scale dish">
-                                <button type="button" class="btn btn-favourite dish__favourite" title="add to favourite">
-                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <use href="svg/favourite.svg#favourite"/>
-                                    </svg>                                 
-                                </button>
-                                <img class="dish__photo" src="https://live.verstaem.online/eatly/src/img/food/1.png" alt="Chiken hell" loading="lazy">
-                                <section class="dish__info">
-                                    <span class="product-status product-status_supreme">Supreme</span>
-                                    <h3 class="head-text title3">The Chiken King</h3>
-                                    
-                                    <div class="dish__bottom">
-                                        <article class="statistic dish__statistic">
-                                            <span class="waiting-time">24min</span>
-                                            <article class="rating">
-                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <use href="svg/star-purple.svg#star-purple"/>
-                                                </svg>
-                                                <span>4.8</span>
-                                            </article>
-                                        </article>
-                                        <span class="dish__price"><span class="title3 main-word_bold">$12</span>.99</span>
-                                        <button type="button" class="btn btn_rounded btn-add-product dish__btn-add-product" title="add product">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <use href="svg/cross.svg#cross"/>
-                                            </svg>                                        
-                                        </button>
-                                    </div>
-                                </section>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="scale dish">
-                                <button type="button" class="btn btn-favourite dish__favourite" title="add to favourite">
-                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <use href="svg/favourite.svg#favourite"/>
-                                    </svg>                                 
-                                </button>
-                                <img class="dish__photo" src="https://live.verstaem.online/eatly/src/img/food/2.png" alt="Swe Dish" loading="lazy">
-                                <section class="dish__info">
-                                    <span class="product-status product-status_trending">Trending</span>
-                                    <h3 class="head-text title3">Swe Dish</h3>
-                                    
-                                    <div class="dish__bottom">
-                                        <article class="statistic dish__statistic">
-                                            <span class="waiting-time">24min</span>
-                                            <article class="rating">
-                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <use href="svg/star-purple.svg#star-purple"/>
-                                                </svg>
-                                                <span>4.8</span>
-                                            </article>
-                                        </article>
-                                        <span class="dish__price"><span class="title3 main-word_bold">$12</span>.99</span>
-                                        <button type="button" class="btn btn_rounded btn-add-product dish__btn-add-product" title="add product">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <use href="svg/cross.svg#cross"/>
-                                            </svg>                                       
-                                        </button>
-                                    </div>
-                                </section>
-                            </article>
-                        </li>
-                    </ul>
-                    <a href="#" class="link_hover link text-link view-link">
-                        View All
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <use href="svg/arrow.svg#arrow"/>
-                        </svg>
-                    </a>
-                </section>
-            </div>
-           
-        </div>
-        <div class="outher-container">
-            <div class="inner-container">
-                <section class="purchases">
-                    <h2 class="head-text title2 title_purchases">Control <span class="main-word">Purchases</span> Via Dashboard</h2>
-                    <ul class="orders-list">
-                        <li>
-                            <article class="product-delivery">
-                                <img class="product-delivery__photo" src="https://live.verstaem.online/eatly/src/img/food/1.png" alt="Chiken hell" loading="lazy">
-                                <div class="product-delivery__info">
-                                    <b>Chiken Hell</b>
-                                    <span class="product-delivery__status product-delivery__status_way">On The Way</span>
+                    </li>
+                    <li>
+                        <article class="review">
+                            <section class="review__reviewer-main">
+                                <img src="https://live.verstaem.online/eatly/src/img/review/1.png" alt="review writer image" loading="lazy">
+                                <div class="review__reviewer-info">
+                                    <span class="review__reviewer-name">Alexander R.</span>
+                                    <span class="review__reviewer-description">1 Year With Us</span>
                                 </div>
-                                <span class="product-delivery__time">3:09 PM</span>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="product-delivery">
-                                <img class="product-delivery__photo" src="https://live.verstaem.online/eatly/src/img/food/2.png" alt="Swe Dish" loading="lazy">
-                                <div class="product-delivery__info">
-                                    <b>Swe Dish</b>
-                                    <span class="product-delivery__status product-delivery__status_canceled">Canceled</span>
+                            </section>
+                            <blockquote class="review__reviewer-quote">
+                                <p>" Online invoice payment helps companies save time, 
+                                    are faster and save maximum effort for the clients and save maximum effort. 
+                                    Online invoice payment helps companies save time "</p>
+                            </blockquote>
+                            <ul class="stars">
+                                <li class="star">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <use href="svg/star.svg#star"/>
+                                    </svg>
+                                </li>
+                                <li class="star">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <use href="svg/star.svg#star"/>
+                                    </svg>
+                                </li>
+                                <li class="star">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <use href="svg/star.svg#star"/>
+                                    </svg>
+                                </li>
+                                <li class="star">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <use href="svg/star.svg#star"/>
+                                    </svg>
+                                </li>
+                                <li class="star">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <use href="svg/star.svg#star"/>
+                                    </svg>
+                                </li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="review">
+                            <section class="review__reviewer-main">
+                                <img src="https://live.verstaem.online/eatly/src/img/review/1.png" alt="review writer image" loading="lazy">
+                                <div class="review__reviewer-info">
+                                    <span class="review__reviewer-name">Alexander R.</span>
+                                    <span class="review__reviewer-description">1 Year With Us</span>
                                 </div>
-                                <span class="product-delivery__time">Yesterday</span>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="product-delivery">
-                                <img class="product-delivery__photo" src="https://live.verstaem.online/eatly/src/img/food/3.png" alt="Fish Hel Veg" loading="lazy">
-                                <div class="product-delivery__info">
-                                    <b>Fish Hel Veg</b>
-                                    <span class="product-delivery__status product-delivery__status_delivered">Delivered</span>
-                                </div>
-                                <span class="product-delivery__time">Yesterday</span>
-                            </article>
-                        </li>
-                    </ul>
-                    <article class="dashboard">
-                        <div class="dashboard__header">
-                            <h3 class="head-text title3 dashboard__title">Purchases</h3>
-                            <div 
-                                class="select dashboard__select"
-                                role="listbox" 
-                                aria-label="Select a preference range" 
-                                aria-owns="dropdown-options"
-                                aria-activedescendant="selected-option"
-                                aria-haspopup="listbox"
-                                tabindex="0"
-                                aria-expanded="false"
-                            >
-                                <span class="select__current-value" id="selected-option">This mounth</span>
-                                <ul role="presentation" class="select__list" id="dropdown-options">
-                                    <li role="option" aria-selected="true" class="select__option select__option_selected">This mounth</li>
-                                    <li role="option" aria-selected="false" class="select__option">This week</li>
-                                    <li role="option" aria-selected="false" class="select__option">This year</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <ul class="purchases__list">
-                            <li>
-                                <article class="purchase">
-                                    <section class="purchase__main">
-                                        <div class="purchase__logo purchase__logo_expense">
-                                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12.3524 1.77494L12.321 1.84823L9.28451 8.89494H6.30039C5.58839 8.89494 4.9078 9.04153 4.29004 9.30329L6.12239 4.92659L6.16427 4.82188L6.23757 4.65435C6.25851 4.59153 6.27945 4.52871 6.31086 4.47635C7.68251 1.30376 9.23216 0.581293 12.3524 1.77494Z" stroke="#936DFF" stroke-width="1.57059" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M17.9957 9.10431C17.5245 8.95773 17.0219 8.8949 16.5194 8.8949H9.28418L12.3206 1.8482L12.3521 1.7749C12.5091 1.82726 12.6557 1.90055 12.8128 1.96337L15.1268 2.93714C16.4147 3.47114 17.3151 4.02608 17.8596 4.6962C17.9643 4.82184 18.0481 4.93702 18.1214 5.07314C18.2156 5.21973 18.2889 5.36631 18.3308 5.52337C18.3727 5.61761 18.4041 5.71184 18.425 5.79561C18.7077 6.67514 18.5402 7.75361 17.9957 9.10431Z" stroke="#936DFF" stroke-width="1.57059" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M21.6303 14.0052V16.0469C21.6303 16.2563 21.6198 16.4657 21.6093 16.6752C21.4104 20.3294 19.3686 22.1722 15.4945 22.1722H7.32744C7.07615 22.1722 6.82485 22.1513 6.58403 22.1199C3.25438 21.9 1.47438 20.12 1.2545 16.7903C1.22309 16.5495 1.20215 16.2982 1.20215 16.0469V14.0052C1.20215 11.9006 2.47956 10.0892 4.30144 9.30386C4.92968 9.0421 5.5998 8.89551 6.3118 8.89551H16.5311C17.0441 8.89551 17.5467 8.9688 18.0074 9.10492C20.0911 9.74363 21.6303 11.6912 21.6303 14.0052Z" stroke="#936DFF" stroke-width="1.57059" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M6.12208 4.92676L4.28972 9.30346C2.46784 10.0888 1.19043 11.9002 1.19043 14.0048V10.9369C1.19043 7.96323 3.30549 5.4817 6.12208 4.92676Z" stroke="#936DFF" stroke-width="1.57059" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M21.6277 10.9358V14.0036C21.6277 11.7001 20.099 9.74211 18.0049 9.11387C18.5494 7.7527 18.7064 6.6847 18.4446 5.7947C18.4237 5.70046 18.3923 5.60623 18.3504 5.52246C20.2979 6.52764 21.6277 8.59034 21.6277 10.9358Z" stroke="#936DFF" stroke-width="1.57059" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>                                    
-                                        </div>
-                                        <div class="purchase__info">
-                                            <span class="purchase__title">Expense</span>
-                                            <span class="purchase__description">Increased By 10%</span>
-                                        </div>
-                                        <span class="purchase__price">$409.00</span>
-                                    </section>
-                                    <meter class="progress progress_expense" min="1" max="10" value="8"></meter>
-                                </article>
-                            </li>
-                            <li>
-                                <article class="purchase">
-                                    <section class="purchase__main">
-                                        <div class="purchase__logo purchase__logo_vocher">
-                                            <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16.8963 19.2331H6.42572C3.28455 19.2331 1.19043 17.6625 1.19043 13.9978V6.6684C1.19043 3.00369 3.28455 1.43311 6.42572 1.43311H16.8963C20.0375 1.43311 22.1316 3.00369 22.1316 6.6684V13.9978C22.1316 17.6625 20.0375 19.2331 16.8963 19.2331Z" stroke="#22C55E" stroke-width="1.57059" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M11.6617 13.4738C13.3965 13.4738 14.8029 12.0674 14.8029 10.3326C14.8029 8.59776 13.3965 7.19141 11.6617 7.19141C9.92686 7.19141 8.52051 8.59776 8.52051 10.3326C8.52051 12.0674 9.92686 13.4738 11.6617 13.4738Z" stroke="#22C55E" stroke-width="1.57059" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M4.85645 7.71533V12.9506" stroke="#22C55E" stroke-width="1.57059" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M18.4668 7.71533V12.9506" stroke="#22C55E" stroke-width="1.57059" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>                                    
-                                        </div>
-                                        <div class="purchase__info">
-                                            <span class="purchase__title">Vocher Usage</span>
-                                            <span class="purchase__description">Increased By 10%</span>
-                                        </div>
-                                        <span class="purchase__price">$45.00</span>
-                                    </section>
-                                    <meter class="progress progress_vocher" min="1" max="10" value="6"></meter>
-                                </article>
-                            </li>
-        
-                        </ul>
-                    </article>
-                </section>
-            </div>
-            
+                            </section>
+                            <blockquote class="review__reviewer-quote">
+                                <p>" Online invoice payment helps companies save time, 
+                                    are faster and save maximum effort for the clients and save maximum effort. 
+                                    Online invoice payment helps companies save time "</p>
+                            </blockquote>
+                            <ul class="stars">
+                                <li class="star">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <use href="svg/star.svg#star"/>
+                                    </svg>
+                                </li>
+                                <li class="star">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <use href="svg/star.svg#star"/>
+                                    </svg>
+                                </li>
+                                <li class="star">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <use href="svg/star.svg#star"/>
+                                    </svg>
+                                </li>
+                                <li class="star">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <use href="svg/star.svg#star"/>
+                                    </svg>
+                                </li>
+                                <li class="star">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <use href="svg/star.svg#star"/>
+                                    </svg>
+                                </li>
+                            </ul>
+                        </article>
+                    </li>
+                </ul>
+            </section>
         </div>
         
-        <div class="outher-container">
-            <div class="inner-container reviews-container">
-                <section class="reviews">
-                    <h2 class="head-text title2"><span class="main-word">Customers</span> Say</h2>
-                    <ul class="reviews-list">
-                        <li>
-                            <article class="review">
-                                <section class="review__reviewer-main">
-                                    <img src="https://live.verstaem.online/eatly/src/img/review/1.png" alt="review writer image" loading="lazy">
-                                    <div class="review__reviewer-info">
-                                        <span class="review__reviewer-name">Alexander R.</span>
-                                        <span class="review__reviewer-description">1 Year With Us</span>
-                                    </div>
-                                </section>
-                                <blockquote class="review__reviewer-quote">
-                                    <p>" Online invoice payment helps companies save time, 
-                                        are faster and save maximum effort for the clients and save maximum effort. 
-                                        Online invoice payment helps companies save time "</p>
-                                </blockquote>
-                                <ul class="stars">
-                                    <li class="star">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use href="svg/star.svg#star"/>
-                                        </svg>
-                                    </li>
-                                    <li class="star">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use href="svg/star.svg#star"/>
-                                        </svg>
-                                    </li>
-                                    <li class="star">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use href="svg/star.svg#star"/>
-                                        </svg>
-                                    </li>
-                                    <li class="star">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use href="svg/star.svg#star"/>
-                                        </svg>
-                                    </li>
-                                    <li class="star">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use href="svg/star.svg#star"/>
-                                        </svg>
-                                    </li>
-                                </ul>
-                                
-                            </article>
-                        </li>
-                        <li>
-                            <article class="review">
-                                <section class="review__reviewer-main">
-                                    <img src="https://live.verstaem.online/eatly/src/img/review/1.png" alt="review writer image" loading="lazy">
-                                    <div class="review__reviewer-info">
-                                        <span class="review__reviewer-name">Alexander R.</span>
-                                        <span class="review__reviewer-description">1 Year With Us</span>
-                                    </div>
-                                </section>
-                                <blockquote class="review__reviewer-quote">
-                                    <p>" Online invoice payment helps companies save time, 
-                                        are faster and save maximum effort for the clients and save maximum effort. 
-                                        Online invoice payment helps companies save time "</p>
-                                </blockquote>
-                                <ul class="stars">
-                                    <li class="star">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use href="svg/star.svg#star"/>
-                                        </svg>
-                                    </li>
-                                    <li class="star">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use href="svg/star.svg#star"/>
-                                        </svg>
-                                    </li>
-                                    <li class="star">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use href="svg/star.svg#star"/>
-                                        </svg>
-                                    </li>
-                                    <li class="star">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use href="svg/star.svg#star"/>
-                                        </svg>
-                                    </li>
-                                    <li class="star">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use href="svg/star.svg#star"/>
-                                        </svg>
-                                    </li>
-                                </ul>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="review">
-                                <section class="review__reviewer-main">
-                                    <img src="https://live.verstaem.online/eatly/src/img/review/1.png" alt="review writer image" loading="lazy">
-                                    <div class="review__reviewer-info">
-                                        <span class="review__reviewer-name">Alexander R.</span>
-                                        <span class="review__reviewer-description">1 Year With Us</span>
-                                    </div>
-                                </section>
-                                <blockquote class="review__reviewer-quote">
-                                    <p>" Online invoice payment helps companies save time, 
-                                        are faster and save maximum effort for the clients and save maximum effort. 
-                                        Online invoice payment helps companies save time "</p>
-                                </blockquote>
-                                <ul class="stars">
-                                    <li class="star">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use href="svg/star.svg#star"/>
-                                        </svg>
-                                    </li>
-                                    <li class="star">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use href="svg/star.svg#star"/>
-                                        </svg>
-                                    </li>
-                                    <li class="star">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use href="svg/star.svg#star"/>
-                                        </svg>
-                                    </li>
-                                    <li class="star">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use href="svg/star.svg#star"/>
-                                        </svg>
-                                    </li>
-                                    <li class="star">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use href="svg/star.svg#star"/>
-                                        </svg>
-                                    </li>
-                                </ul>
-                            </article>
-                        </li>
-                    </ul>
-                </section>
-            </div>
-            
-        </div>
-        
-        <div class="outher-container">
-            <div class="inner-container subscribe-container">
+        <div class="container">
+            <div class="content-container subscribe-container">
                 <section class="subscribe">
                     <span class="subscribe__title">Get 50%</span>
                     <form class="subscribe__form" action="">
@@ -687,86 +708,88 @@
         </div>
         
     </main>
-    <footer class="footer">
-        <section class="footer__head">
-            <a href="#" class="logo footer__logo">
-                <svg class="logo__svg" width="46" height="43" viewBox="0 0 46 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <use href="svg/logo.svg#logo"/>
-                </svg>
-                <span class="logo__title">eatly</span>
-            </a>
-            <nav class="nav footer__nav">
-                <ul class="nav__list">
-                    <li><a href="#" class="link_hover nav__link">Blog</a></li>
-                    <li><a href="#" class="link_hover nav__link">Pricing</a></li>
-                    <li><a href="#" class="link_hover nav__link">About Us</a></li>
-                    <li><a href="#" class="link_hover nav__link">Contacts</a></li>
-                </ul>
-            </nav>
-        </section>
-        <section class="footer__contact">
-            <p class="description_opacity">© 2023 EATLY All Rights Reserved.</p>
-            <address>
-                <ul class="socials-list">
-                    <li>
-                        <a href="#" title="instagram" class="link_hover">
-                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7721 0C12.1916 0.0506994 13.6618 0.0506994 
-                                15.0812 0.101392C16.3486 0.152085 17.5146 0.354867 18.6299 1.0139C20.0494 1.87572 20.9112 3.14309 
-                                21.2154 4.76533C21.3674 5.72853 21.4181 6.74243 21.4688 7.70564C21.5195 9.83483 21.4688 11.964 21.4688 
-                                14.0932C21.4688 15.2085 21.4181 16.3238 21.0633 17.3884C20.3535 19.4669 18.8834 20.7342 16.7542 21.1398C15.791 
-                                21.3426 14.7771 21.3426 13.8139 21.3933C11.6846 21.444 9.60615 21.3933 7.47694 21.3933C6.36165 21.3933 5.24635 
-                                21.3426 4.18176 20.9877C2.10325 20.278 0.835867 18.8078 0.430303 16.6786C0.227525 15.7154 0.227525 14.7015 0.176829 
-                                13.7383C0.126131 11.6091 0.176829 9.47996 0.176829 7.35077C0.176829 6.23549 0.227525 5.1202 0.582391 4.05559C1.29213 1.9771 2.76229 0.709734 4.89148 0.304173C5.8547 0.101399 6.8686 0.101399 7.83181 0.0506994C8.79502 0 9.75823 0 10.7721 0ZM19.5426 10.4939C19.4919 10.4939 19.5426 10.4939 19.5426 10.4939C19.4919 9.6321 19.4919 8.82097 19.4919 7.95916C19.4919 7.14805 19.4412 6.33692 19.3398 5.52581C19.137 3.70078 18.0724 2.4841 16.2981 2.12924C15.3855 1.92646 14.3716 1.92646 13.4591 1.92646C11.6341 1.87577 9.85976 1.87577 8.03473 1.92646C7.12222 1.92646 6.2097 1.97715 5.34788 2.12924C3.82702 2.38271 2.76243 3.24453 2.30617 4.76538C2.15408 5.27233 2.10339 5.77928 2.05269 6.28623C2.002 8.21264 2.002 10.139 2.002 12.0655C2.002 13.2821 2.05269 14.5495 2.15408 15.7662C2.30617 17.5912 3.42146 18.8586 5.2465 19.1627C6.159 19.3148 7.12222 19.3655 8.08543 19.3655C9.85976 19.4162 11.6341 19.3655 13.4591 19.3655C14.2703 19.3655 15.0814 19.3148 15.8925 19.2134C16.6529 19.1627 17.3627 18.9093 17.971 18.4023C18.9849 17.5912 19.3398 16.5266 19.3905 15.3099C19.4919 13.7891 19.4919 12.1668 19.5426 10.4939Z" fill="#081420"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2471 10.6962C16.2471 13.7379 13.8137 16.1712 10.772 16.1712C7.73025 16.1712 5.29688 13.7379 5.29688 10.6455C5.29688 7.65453 7.78094 5.22119 10.8227 5.22119C13.8137 5.22119 16.2471 7.65453 16.2471 10.6962ZM10.7719 14.2448C12.6983 14.2448 14.3205 12.6226 14.3205 10.6962C14.3205 8.76976 12.6983 7.14752 10.7719 7.14752C8.79474 7.14752 7.22318 8.76976 7.22318 10.6962C7.17248 12.6226 8.79474 14.2448 10.7719 14.2448Z" fill="#081420"/>
-                                <path d="M17.7184 4.96758C17.7184 5.67731 17.1607 6.28566 16.451 6.28566C15.7413 6.28566 15.1329 5.67731 15.1836 4.96758C15.1836 4.25785 15.7413 3.7002 16.451 3.7002C17.1607 3.7002 17.7184 4.25784 17.7184 4.96758Z" fill="#081420"/>
-                            </svg>
-                        </a>
-                                                    
-                    </li>
-                    <li>
-                        <a href="#" title="linkedIn" class="link_hover">
-                            <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6325 12.4811V20.3602H17.0315V12.9987C17.0315 11.1583 16.3989 9.89304 
-                                14.731 9.89304C13.4658 9.89304 12.7181 10.7557 12.373 11.5609C12.258 11.8484 12.2005 12.251 12.2005 12.6536V20.3602H7.59952C7.59952 
-                                20.3602 7.65703 7.88013 7.59952 6.61487H12.2005V8.57027C12.2005 8.57027 12.2005 8.62777 12.143 8.62777H12.2005V8.57027C12.8331 7.65008 
-                                13.8684 6.26979 16.3414 6.26979C19.332 6.26979 21.6325 8.28271 21.6325 12.4811ZM2.88298 0.000976562C1.33014 0.000976562 0.294922 
-                                1.03619 0.294922 2.35897C0.294922 3.68174 1.27263 4.71697 2.82546 4.71697H2.88298C4.49333 4.71697 5.47103 3.68175 5.47103 
-                                2.35897C5.41352 1.03619 4.43581 0.000976562 2.88298 0.000976562ZM0.525568 20.3602H5.06905V6.61489H0.525568V20.3602Z" fill="#081420"/>
-                            </svg>
-                        </a>
-                        
-                    </li>
-                    <li>
-                        <a href="#" title="facebook" class="link_hover">
-                            <svg width="11" height="22" viewBox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.95256 10.6695H6.97166V21.338H2.52644V12.415V10.6695H0.43457V6.90414H2.52644V4.4462C2.52644 
-                                2.72041 3.36319 0.000976562 6.97166 0.000976562H10.2663V3.66174H7.913C7.54692 3.66174 6.97166 3.87094 6.97166 4.70768V6.90414H10.3186L9.95256 
-                                10.6695Z" fill="#081420"/>
-                            </svg>
-                        </a>
-                        
-                    </li>
-                    <li>
-                        <a href="#" title="twitter" class="link_hover">
-                            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6154 2.82596C20.8121 3.1774 20.0088 
-                                3.42842 19.1052 3.52883C20.0088 2.97658 20.7117 2.1231 21.0129 1.11901C20.1595 1.62106 
-                                19.2056 1.97249 18.2517 2.1733C17.4484 1.31982 16.2937 0.767578 15.0386 0.767578C12.6287 
-                                0.767578 10.6707 2.72555 10.6707 5.13537C10.6707 5.48681 10.7209 5.83823 10.7711 6.13947C7.10619 5.93865 3.89307 
-                                4.23169 1.73426 1.57085C1.33262 2.22351 1.1318 2.97658 1.1318 3.77985C1.1318 5.28599 1.88488 6.64151 3.08979 7.44478C2.38692 
-                                7.44478 1.68406 7.24397 1.0816 6.89253V6.94273C1.0816 9.05133 2.58774 10.8587 4.59594 11.2603C4.2445 11.3607 3.84287 11.4109 
-                                3.44122 11.4109C3.14 11.4109 2.88897 11.3607 2.63795 11.3105C3.1902 13.0677 4.79676 14.3228 6.75475 14.373C5.2486 15.5277 
-                                3.39102 16.2306 1.33262 16.2306C0.981189 16.2306 0.629757 16.2306 0.27832 16.1804C2.23631 17.4355 4.49553 18.1383 7.00577 
-                                18.1383C15.0888 18.1383 19.4566 11.4611 19.4566 5.68762C19.4566 5.48681 19.4566 5.28599 19.4566 5.13537C20.3101 4.48272 21.0631 
-                                3.67944 21.6154 2.82596Z" fill="#081420"/>
-                            </svg>
-                        </a>
-                        
-                    </li>
-                </ul>
-            </address>
-        </section>
+    <footer class="content footer">
+        <div class="content-container footer__content">
+            <section class="footer__head">
+                <a href="#" class="logo footer__logo">
+                    <svg class="logo__svg" width="46" height="43" viewBox="0 0 46 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use href="svg/logo.svg#logo"/>
+                    </svg>
+                    <span class="logo__title">eatly</span>
+                </a>
+                <nav class="nav footer__nav">
+                    <ul class="nav__list">
+                        <li><a href="#" class="link_hover nav__link">Blog</a></li>
+                        <li><a href="#" class="link_hover nav__link">Pricing</a></li>
+                        <li><a href="#" class="link_hover nav__link">About Us</a></li>
+                        <li><a href="#" class="link_hover nav__link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="footer__contact">
+                <p class="description_opacity">© 2023 EATLY All Rights Reserved.</p>
+                <address>
+                    <ul class="socials-list">
+                        <li>
+                            <a href="#" title="instagram" class="link_hover">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7721 0C12.1916 0.0506994 13.6618 0.0506994 
+                                    15.0812 0.101392C16.3486 0.152085 17.5146 0.354867 18.6299 1.0139C20.0494 1.87572 20.9112 3.14309 
+                                    21.2154 4.76533C21.3674 5.72853 21.4181 6.74243 21.4688 7.70564C21.5195 9.83483 21.4688 11.964 21.4688 
+                                    14.0932C21.4688 15.2085 21.4181 16.3238 21.0633 17.3884C20.3535 19.4669 18.8834 20.7342 16.7542 21.1398C15.791 
+                                    21.3426 14.7771 21.3426 13.8139 21.3933C11.6846 21.444 9.60615 21.3933 7.47694 21.3933C6.36165 21.3933 5.24635 
+                                    21.3426 4.18176 20.9877C2.10325 20.278 0.835867 18.8078 0.430303 16.6786C0.227525 15.7154 0.227525 14.7015 0.176829 
+                                    13.7383C0.126131 11.6091 0.176829 9.47996 0.176829 7.35077C0.176829 6.23549 0.227525 5.1202 0.582391 4.05559C1.29213 1.9771 2.76229 0.709734 4.89148 0.304173C5.8547 0.101399 6.8686 0.101399 7.83181 0.0506994C8.79502 0 9.75823 0 10.7721 0ZM19.5426 10.4939C19.4919 10.4939 19.5426 10.4939 19.5426 10.4939C19.4919 9.6321 19.4919 8.82097 19.4919 7.95916C19.4919 7.14805 19.4412 6.33692 19.3398 5.52581C19.137 3.70078 18.0724 2.4841 16.2981 2.12924C15.3855 1.92646 14.3716 1.92646 13.4591 1.92646C11.6341 1.87577 9.85976 1.87577 8.03473 1.92646C7.12222 1.92646 6.2097 1.97715 5.34788 2.12924C3.82702 2.38271 2.76243 3.24453 2.30617 4.76538C2.15408 5.27233 2.10339 5.77928 2.05269 6.28623C2.002 8.21264 2.002 10.139 2.002 12.0655C2.002 13.2821 2.05269 14.5495 2.15408 15.7662C2.30617 17.5912 3.42146 18.8586 5.2465 19.1627C6.159 19.3148 7.12222 19.3655 8.08543 19.3655C9.85976 19.4162 11.6341 19.3655 13.4591 19.3655C14.2703 19.3655 15.0814 19.3148 15.8925 19.2134C16.6529 19.1627 17.3627 18.9093 17.971 18.4023C18.9849 17.5912 19.3398 16.5266 19.3905 15.3099C19.4919 13.7891 19.4919 12.1668 19.5426 10.4939Z" fill="#081420"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2471 10.6962C16.2471 13.7379 13.8137 16.1712 10.772 16.1712C7.73025 16.1712 5.29688 13.7379 5.29688 10.6455C5.29688 7.65453 7.78094 5.22119 10.8227 5.22119C13.8137 5.22119 16.2471 7.65453 16.2471 10.6962ZM10.7719 14.2448C12.6983 14.2448 14.3205 12.6226 14.3205 10.6962C14.3205 8.76976 12.6983 7.14752 10.7719 7.14752C8.79474 7.14752 7.22318 8.76976 7.22318 10.6962C7.17248 12.6226 8.79474 14.2448 10.7719 14.2448Z" fill="#081420"/>
+                                    <path d="M17.7184 4.96758C17.7184 5.67731 17.1607 6.28566 16.451 6.28566C15.7413 6.28566 15.1329 5.67731 15.1836 4.96758C15.1836 4.25785 15.7413 3.7002 16.451 3.7002C17.1607 3.7002 17.7184 4.25784 17.7184 4.96758Z" fill="#081420"/>
+                                </svg>
+                            </a>
+                                                        
+                        </li>
+                        <li>
+                            <a href="#" title="linkedIn" class="link_hover">
+                                <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6325 12.4811V20.3602H17.0315V12.9987C17.0315 11.1583 16.3989 9.89304 
+                                    14.731 9.89304C13.4658 9.89304 12.7181 10.7557 12.373 11.5609C12.258 11.8484 12.2005 12.251 12.2005 12.6536V20.3602H7.59952C7.59952 
+                                    20.3602 7.65703 7.88013 7.59952 6.61487H12.2005V8.57027C12.2005 8.57027 12.2005 8.62777 12.143 8.62777H12.2005V8.57027C12.8331 7.65008 
+                                    13.8684 6.26979 16.3414 6.26979C19.332 6.26979 21.6325 8.28271 21.6325 12.4811ZM2.88298 0.000976562C1.33014 0.000976562 0.294922 
+                                    1.03619 0.294922 2.35897C0.294922 3.68174 1.27263 4.71697 2.82546 4.71697H2.88298C4.49333 4.71697 5.47103 3.68175 5.47103 
+                                    2.35897C5.41352 1.03619 4.43581 0.000976562 2.88298 0.000976562ZM0.525568 20.3602H5.06905V6.61489H0.525568V20.3602Z" fill="#081420"/>
+                                </svg>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="#" title="facebook" class="link_hover">
+                                <svg width="11" height="22" viewBox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.95256 10.6695H6.97166V21.338H2.52644V12.415V10.6695H0.43457V6.90414H2.52644V4.4462C2.52644 
+                                    2.72041 3.36319 0.000976562 6.97166 0.000976562H10.2663V3.66174H7.913C7.54692 3.66174 6.97166 3.87094 6.97166 4.70768V6.90414H10.3186L9.95256 
+                                    10.6695Z" fill="#081420"/>
+                                </svg>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="#" title="twitter" class="link_hover">
+                                <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6154 2.82596C20.8121 3.1774 20.0088 
+                                    3.42842 19.1052 3.52883C20.0088 2.97658 20.7117 2.1231 21.0129 1.11901C20.1595 1.62106 
+                                    19.2056 1.97249 18.2517 2.1733C17.4484 1.31982 16.2937 0.767578 15.0386 0.767578C12.6287 
+                                    0.767578 10.6707 2.72555 10.6707 5.13537C10.6707 5.48681 10.7209 5.83823 10.7711 6.13947C7.10619 5.93865 3.89307 
+                                    4.23169 1.73426 1.57085C1.33262 2.22351 1.1318 2.97658 1.1318 3.77985C1.1318 5.28599 1.88488 6.64151 3.08979 7.44478C2.38692 
+                                    7.44478 1.68406 7.24397 1.0816 6.89253V6.94273C1.0816 9.05133 2.58774 10.8587 4.59594 11.2603C4.2445 11.3607 3.84287 11.4109 
+                                    3.44122 11.4109C3.14 11.4109 2.88897 11.3607 2.63795 11.3105C3.1902 13.0677 4.79676 14.3228 6.75475 14.373C5.2486 15.5277 
+                                    3.39102 16.2306 1.33262 16.2306C0.981189 16.2306 0.629757 16.2306 0.27832 16.1804C2.23631 17.4355 4.49553 18.1383 7.00577 
+                                    18.1383C15.0888 18.1383 19.4566 11.4611 19.4566 5.68762C19.4566 5.48681 19.4566 5.28599 19.4566 5.13537C20.3101 4.48272 21.0631 
+                                    3.67944 21.6154 2.82596Z" fill="#081420"/>
+                                </svg>
+                            </a>
+                            
+                        </li>
+                    </ul>
+                </address>
+            </section>
+        </div>
     </footer>
 </body>
 </html>

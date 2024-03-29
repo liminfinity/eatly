@@ -4,7 +4,7 @@ const dropdownMenu = document.querySelector('.select__list');
 let ariaExpanded = false;
 
 document.addEventListener('click', e => {
-    if (!e.target.closest('.select')) dropdownMenu.classList.remove('visibile')
+    if (!e.target.closest('.select')) toogleDropDown()
 })
 
 dropdownResult.addEventListener('click', _ => {
@@ -26,5 +26,6 @@ dropdownMenu.querySelectorAll('.select__option').forEach(option => {
 function toogleDropDown() {
     dropdown.setAttribute('aria-expanded', ariaExpanded = !ariaExpanded)
     dropdown.classList.toggle('select_open')
-    dropdownMenu.classList.toggle('visibile')
+    dropdownMenu.classList.toggle('hidden')
+    dropdownMenu.classList.toggle('visible')
 }

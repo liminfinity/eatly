@@ -1,21 +1,30 @@
-.header-container {
+
+.header {
     position: sticky;
-    padding-block: initial;
     top: 0px;
     z-index: 2;
-    background-color: var(--main-color);
 }
-.header {
+.header__content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
     padding-block: 1.5rem;
-    border-bottom: .1rem solid var(--opacity-text-color);
-    
-}
+    gap: 2rem;
+}   
 .header__nav {
     flex: 1;
+}
+@media (max-width: 770px) {
+    .header__nav {
+        display: none;
+    }
+    .header__auth {
+        flex: 1;
+        justify-content: flex-end;
+    }
+}
+.header__burger {
+    align-self: stretch;
 }
 
 
